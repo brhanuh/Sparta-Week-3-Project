@@ -21,3 +21,16 @@ public class Employee {
     }
 
 }
+/*
+Suggestion, make ths class abstract
+    public abstract class Employee {
+
+    public abstract void employeeNumber;
+    public abstract void dateOfBirth;
+    public abstract void firstName;
+    public abstract void lastName;
+    public abstract void gender;
+    public abstract void dateOfEmployment;
+
+    with another abstract class to generate the individual spartains
+ */

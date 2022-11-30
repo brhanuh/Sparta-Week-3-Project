@@ -22,4 +22,7 @@ public class EmployeeFactory {
         // return the first numEmployees values as an array
         return result.subList(0,numEmployees).toArray(new String[0]);
     }
+    //TODO create a test that checks the user input for:
+    // - user input range of 1 - 1000
+    // - user input type - int
 }
