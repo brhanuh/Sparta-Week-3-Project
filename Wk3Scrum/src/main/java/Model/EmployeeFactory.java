@@ -1,4 +1,4 @@
-package com.sparta.employees;
+package Model;
 
 import java.io.*;
 import java.util.*;
