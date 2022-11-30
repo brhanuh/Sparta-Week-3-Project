@@ -32,5 +32,5 @@ Suggestion, make ths class abstract
     public abstract void gender;
     public abstract void dateOfEmployment;
 
-    with another abstract class to generate the individual spartains
+    with another abstract class to generate the individual spartans
  */
