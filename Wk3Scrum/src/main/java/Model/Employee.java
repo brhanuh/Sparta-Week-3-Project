@@ -34,3 +34,8 @@ Suggestion, make ths class abstract
 
     with another abstract class to generate the individual spartans
  */
+
+/*
+ Suggestion,
+ We may want some methods for getting data from these employees
+*/
