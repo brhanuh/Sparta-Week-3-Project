@@ -1,8 +1,9 @@
 package Model;
 
+import java.util.Comparator;
 import java.util.Date;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 
     private int employeeNumber;
     private Date dateOfBirth;
@@ -78,5 +79,15 @@ public class Employee {
 
     public void setDateOfEmployment(Date dateOfEmployment) {
         this.dateOfEmployment = dateOfEmployment;
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+
+        return(this.getLastName().compareTo(o.getLastName()));
+
+//        if (this.getEmployeeNumber() > (o.getEmployeeNumber())){
+//            return -1;
+//        }
     }
 }

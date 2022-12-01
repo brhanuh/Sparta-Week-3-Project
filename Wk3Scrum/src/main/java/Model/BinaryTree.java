@@ -2,23 +2,23 @@ package Model;
 
 public class BinaryTree {
     static class Node{
-        int data;
+        Employee data;
         Node left;
         Node right;
 
-        public Node(int data){
+        public Node(Employee data){
             this.data = data;
             this.left = null;
             this.right = null;
         }
     }
 
-    void add(Node start, int data){
+    void add(Node start, Employee data){
         // don't actually need this logic. All cases are covered
 //        if (start.data == data){
 //            return;
 //        }
-        if(data < start.data){
+        if(data.compareTo(start.data) < 0){
             if (start.left == null){
                 start.left = new Node(data);
             }
@@ -26,7 +26,7 @@ public class BinaryTree {
                 add(start.left, data);
             }
         }
-        else if (data > start.data){
+        else if (data.compareTo(start.data) > 0){
             if (start.right == null){
                 start.right = new Node(data);
             }
