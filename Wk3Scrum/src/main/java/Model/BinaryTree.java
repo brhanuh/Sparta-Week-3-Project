@@ -1,7 +1,7 @@
 package Model;
 
 public class BinaryTree {
-    static class Node{
+    public static class Node{
         Employee data;
         Node left;
         Node right;
@@ -13,11 +13,8 @@ public class BinaryTree {
         }
     }
 
-    void add(Node start, Employee data){
-        // don't actually need this logic. All cases are covered
-//        if (start.data == data){
-//            return;
-//        }
+    public void add(Node start, Employee data){
+
         if(data.compareTo(start.data) < 0){
             if (start.left == null){
                 start.left = new Node(data);
@@ -35,4 +32,17 @@ public class BinaryTree {
             }
         }
     }
+
+    public static void printleafNodes(Node node){
+        if(node != null){
+            return;
+        }
+        if(node.left == null && node.right == null){
+            System.out.println(node);
+        }
+        printleafNodes(node.left);
+        printleafNodes(node.right);
+    }
+    //TODO: Dereference of node will produceNullPointerException
+    // Will fix or test this
 }

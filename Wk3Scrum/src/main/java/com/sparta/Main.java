@@ -25,10 +25,10 @@ public class Main {
         }
 
         BinaryTree bt = new BinaryTree();
-        Node start = new Node(EmployeeList.get(0));
+        BinaryTree.Node start = new BinaryTree.Node(EmployeeList.get(0));
         for (Employee e: EmployeeList) {
             System.out.println(e);
-            bt.add(EmployeeList.get(0),EmployeeList.get(e))
+            bt.add(start, e);
         }
 
 
