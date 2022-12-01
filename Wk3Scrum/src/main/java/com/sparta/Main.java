@@ -3,6 +3,7 @@ package com.sparta;
 import Model.BinaryTree;
 import Model.Employee;
 import Model.EmployeeFactory;
+import Model.EmployeeListConverter;
 import View.UserInput;
 
 import java.util.ArrayList;
@@ -24,15 +25,8 @@ public class Main {
             EmployeeList.add(EmployeeFactory.makeEmployee(empData[0],empData[1],empData[2],empData[3],empData[4],empData[5]));
         }
 
-        BinaryTree bt = new BinaryTree();
-        BinaryTree.Node start = new BinaryTree.Node(EmployeeList.get(0));
-        for (Employee e: EmployeeList) {
-            System.out.println(e);
-            bt.add(start, e);
-        }
-
-
-
+        EmployeeListConverter employeeListConverter = new EmployeeListConverter();
+        System.out.println(employeeListConverter.convert(EmployeeList));
 
     }
 }
