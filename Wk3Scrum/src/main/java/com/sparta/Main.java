@@ -2,6 +2,7 @@ package com.sparta;
 
 import Model.Employee;
 import Model.EmployeeFactory;
+import View.UserInput;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        String[] employeeSample = EmployeeFactory.getEmployees(1000);
+        String[] employeeSample = EmployeeFactory.getEmployees(UserInput.getUserInput());
         ArrayList<String[]> newStrings = new ArrayList<>();
         List<Employee> EmployeeList = new ArrayList();
         for(String s : employeeSample){
@@ -21,5 +22,10 @@ public class Main {
 //          At this point you can get each part of employee data using the index values e.g. empData[1]
             EmployeeList.add(EmployeeFactory.makeEmployee(empData[0],empData[1],empData[2],empData[3],empData[4],empData[5]));
         }
+
+        for (Employee e: EmployeeList) {
+            System.out.println(e);
+        }
+
     }
 }
