@@ -1,6 +1,5 @@
 package Model;
 
-import java.util.Comparator;
 import java.util.Date;
 
 public class Employee implements Comparable<Employee> {
