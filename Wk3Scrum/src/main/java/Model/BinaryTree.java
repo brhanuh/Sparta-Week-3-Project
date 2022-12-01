@@ -1,7 +1,7 @@
 package Model;
 
 public class BinaryTree {
-    static class Node{
+    public static class Node{
         Employee data;
         Node left;
         Node right;
@@ -13,7 +13,7 @@ public class BinaryTree {
         }
     }
 
-    void add(Node start, Employee data){
+    public void add(Node start, Employee data){
         // don't actually need this logic. All cases are covered
 //        if (start.data == data){
 //            return;
