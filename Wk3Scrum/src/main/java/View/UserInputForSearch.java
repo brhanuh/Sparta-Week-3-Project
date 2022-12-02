@@ -13,7 +13,7 @@ public class UserInputForSearch {
             System.out.print("Enter the last name of an employee");
             try {
                 lastName = scanner.next();
-                if (lastName != null && lastName.matches("^[a-zA-Z ]*$")) {
+                if (lastName != null && lastName.matches("^[a-zA-Z-]*$")) {
                     valid = true;
                 } else {
                     System.out.println("Please enter a correct format");

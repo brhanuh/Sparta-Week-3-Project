@@ -37,7 +37,7 @@ Advantages of MVC
         - Components are reusable.
         - Easy o maintain.
         - Different components of the application in MVC can be independently deployed and maintained.
-        - This architecture helpt to test components independently.
+        - This architecture helps to test components independently.
 
 Disadvantages of MVC
         - The complexity is high.
