@@ -10,7 +10,7 @@ public class UserInputForSearch {
         String lastName = "";
         boolean valid = false;
         while (!valid) {
-            System.out.print("Enter the last name of an employee");
+            System.out.print("Enter the last name of an employee: ");
             try {
                 lastName = scanner.next();
                 if (lastName != null && lastName.matches("^[a-zA-Z ]*$")) {

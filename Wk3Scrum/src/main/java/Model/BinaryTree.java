@@ -27,13 +27,13 @@ public class BinaryTree {
         if (start.data.compareTo(data) == 0){
             if (start.left == null){
                 start.left = new Node(data);
+            } else {
+                add(start.left, data);
             }
         }
-        //System.out.println();
         else if(data.compareTo(start.data) < 0){
             if (start.left == null){
                 start.left = new Node(data);
-//                System.out.println("assigned left: " + data.getEmployeeNumber());
             }
             else {
                 add(start.left, data);
@@ -42,7 +42,6 @@ public class BinaryTree {
         else if (data.compareTo(start.data) > 0){
             if (start.right == null){
                 start.right = new Node(data);
-//                System.out.println("Assigned right: " + data.getEmployeeNumber());
             }
             else {
                 add(start.right, data);
@@ -54,9 +53,6 @@ public class BinaryTree {
         if (node == null) {
             return;
         }
-//        if (node.left == null && node.right == null) {
-//            //System.out.println(node.toString());
-//        }
         System.out.println(node);
         printNodes(node.left);
         printNodes(node.right);
@@ -64,7 +60,6 @@ public class BinaryTree {
     public void search(Node n, String s){
         if (n.equals(null)){
             System.out.println(n + " is null");
-            System.out.println(s + " not found");
         }
         else if (s.equals(n.data.getLastName())){
             System.out.println(n.data.fullToString());
@@ -73,8 +68,16 @@ public class BinaryTree {
             }
         }
         else if(s.compareTo(n.data.getLastName()) < 0){
-            search(n.left,s);
+            if(n.left != null) {
+                search(n.left, s);
+            } else
+                System.out.println("Employee not in the sample");
         }
-        else search(n.right,s);
+        else {
+            if (n.right != null) {
+                search(n.right, s);
+            } else
+                System.out.println("Employee not in the sample");
+        }
     }
 }

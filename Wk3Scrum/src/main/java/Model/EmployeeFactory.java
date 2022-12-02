@@ -21,7 +21,7 @@ public class EmployeeFactory {
         BufferedReader f = null;
         try {
             f = new BufferedReader(new FileReader("src/main/resources/employees.csv")); // Could test this maybe by renaming the employees file and see if this try fires
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException | NullPointerException e) {
             logger.log(Level.ERROR, "employees.csv file not found");
             logger.error(e.getMessage(),e);
         }
