@@ -11,7 +11,7 @@ public class UserInput {
         int num = 0;
         boolean valid = false;
         while (!valid) {
-            System.out.print("Enter number between 1 and 1000 ");
+            System.out.print("Enter number between 1 and 1000: ");
             try {
                 num = scanner.nextInt();
                 if (num > 0 && num <= 1000) {
@@ -24,7 +24,7 @@ public class UserInput {
                 scanner.next();
             }
         }
-        System.out.println("This is a list of " + num + " employees");
+        System.out.println("This is a list of " + num + " employees: ");
         return num;
     }
 }

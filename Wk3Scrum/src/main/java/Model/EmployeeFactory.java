@@ -1,13 +1,20 @@
 package Model;
 
 import View.UserInput;
-import org.apache.logging.log4j.*;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.io.*;
-import java.net.Proxy;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
 
 public class EmployeeFactory {
     public static Logger logger = LogManager.getLogger();
@@ -68,7 +75,7 @@ public class EmployeeFactory {
         return new Employee( intEmployeeNumber, dateDateOfBirth, firstName, lastName, charGender, dateDateOfEmployment);
     }
 
-    public static List<Employee> getListOfEmployeeObjects(int userImput) {
+    public static List<Employee> getListOfEmployeeObjects() {
 
         String[] employeeSample = EmployeeFactory.getEmployees(UserInput.getUserInput());
         ArrayList<String[]> newStrings = new ArrayList<>();
