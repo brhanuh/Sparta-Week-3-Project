@@ -1,5 +1,6 @@
 package Model;
 
+import View.UserInput;
 import org.apache.logging.log4j.*;
 
 import java.io.*;
@@ -65,6 +66,20 @@ public class EmployeeFactory {
             throw new RuntimeException(e);
         }
         return new Employee( intEmployeeNumber, dateDateOfBirth, firstName, lastName, charGender, dateDateOfEmployment);
+    }
+
+    public static List<Employee> getListOfEmployeeObjects(int userImput) {
+
+        String[] employeeSample = EmployeeFactory.getEmployees(UserInput.getUserInput());
+        ArrayList<String[]> newStrings = new ArrayList<>();
+        List<Employee> EmployeeList = new ArrayList();
+        for (String s : employeeSample) {
+            newStrings.add(s.split(","));
+        }
+
+        for (String[] empData : newStrings) {
+            EmployeeList.add(EmployeeFactory.makeEmployee(empData[0], empData[1], empData[2], empData[3], empData[4], empData[5]));
+        } return EmployeeList;
     }
     //TODO create a test that checks the user input for:
     // - user input type - int
