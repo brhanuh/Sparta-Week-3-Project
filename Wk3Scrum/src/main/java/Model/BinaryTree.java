@@ -23,12 +23,14 @@ public class BinaryTree {
     }
 
     public void add(Node start, Employee data){
-        // don't actually need this logic. All cases are covered
-//        if (start.data == data){
-//            return;
-//        }
+
+        if (start.data.compareTo(data) == 0){
+            if (start.left == null){
+                start.left = new Node(data);
+            }
+        }
         //System.out.println();
-        if(data.compareTo(start.data) < 0){
+        else if(data.compareTo(start.data) < 0){
             if (start.left == null){
                 start.left = new Node(data);
 //                System.out.println("assigned left: " + data.getEmployeeNumber());
@@ -66,6 +68,9 @@ public class BinaryTree {
         }
         else if (s.equals(n.data.getLastName())){
             System.out.println(n.data.fullToString());
+            while(n.left.data.getLastName().equals(s)){
+                search(n.left,s);
+            }
         }
         else if(s.compareTo(n.data.getLastName()) < 0){
             search(n.left,s);

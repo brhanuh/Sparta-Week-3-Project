@@ -5,8 +5,10 @@ import Model.Employee;
 import Model.EmployeeFactory;
 import Model.EmployeeListConverter;
 import View.UserInput;
+import View.UserInputForSearch;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -24,6 +26,7 @@ public class Main {
 //          At this point you can get each part of employee data using the index values e.g. empData[1]
             EmployeeList.add(EmployeeFactory.makeEmployee(empData[0], empData[1], empData[2], empData[3], empData[4], empData[5]));
         }
+        Collections.sort(EmployeeList);
 
         BinaryTree bt = (new EmployeeListConverter().convert(EmployeeList));
         final BinaryTree.Node root = new BinaryTree.Node(EmployeeList.get(0));
@@ -34,7 +37,14 @@ public class Main {
             bt.add(root, e);
         }
 //        bt.printNodes(root);
-        bt.search(root,EmployeeList.get(1).getLastName());
+
+        for(Employee e : EmployeeList){
+            System.out.println(e.fullToString());
+        }
+
+        System.out.println("\n");
+
+        bt.search(root, UserInputForSearch.getUserInput());
 
     }
 }
