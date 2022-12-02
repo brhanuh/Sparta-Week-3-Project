@@ -36,6 +36,8 @@ public class Main {
         //bt.printNodes(root);
         bt.search(root, "Bail");
 
+        EmployeeListConverter employeeListConverter = new EmployeeListConverter();
+        System.out.println(employeeListConverter.convert(EmployeeList));
 
     }
 }
