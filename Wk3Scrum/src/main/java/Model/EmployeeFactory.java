@@ -3,6 +3,7 @@ package Model;
 import org.apache.logging.log4j.*;
 
 import java.io.*;
+import java.net.Proxy;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -66,7 +67,6 @@ public class EmployeeFactory {
         return new Employee( intEmployeeNumber, dateDateOfBirth, firstName, lastName, charGender, dateDateOfEmployment);
     }
     //TODO create a test that checks the user input for:
-    // - user input range of 1 - 1000
     // - user input type - int
     // - Create proper exception handling on the date formatting
 }
