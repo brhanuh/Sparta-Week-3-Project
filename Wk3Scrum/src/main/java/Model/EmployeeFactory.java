@@ -79,7 +79,7 @@ public class EmployeeFactory {
 
         String[] employeeSample = EmployeeFactory.getEmployees(UserInput.getUserInput());
         ArrayList<String[]> newStrings = new ArrayList<>();
-        List<Employee> EmployeeList = new ArrayList();
+        List<Employee> EmployeeList = new ArrayList<>();
         for (String s : employeeSample) {
             newStrings.add(s.split(","));
         }
