@@ -27,14 +27,8 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "employeeNumber=" + employeeNumber +
-                ", dateOfBirth=" + dateOfBirth +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gender=" + gender +
-                ", dateOfEmployment=" + dateOfEmployment +
-                '}';
+        return
+                "lastName='" + lastName;
     }
 
     public void setEmployeeNumber(int employeeNumber) {
@@ -83,7 +77,6 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public int compareTo(Employee o) {
-
         return(this.getLastName().compareTo(o.getLastName()));
 
 //        if (this.getEmployeeNumber() > (o.getEmployeeNumber())){

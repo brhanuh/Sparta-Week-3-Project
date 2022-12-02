@@ -11,6 +11,15 @@ public class BinaryTree {
             this.left = null;
             this.right = null;
         }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "data=" + data +
+                    ", left=" + left +
+                    ", right=" + right +
+                    '}';
+        }
     }
 
     public void add(Node start, Employee data){
@@ -18,6 +27,7 @@ public class BinaryTree {
 //        if (start.data == data){
 //            return;
 //        }
+        //System.out.println();
         if(data.compareTo(start.data) < 0){
             if (start.left == null){
                 start.left = new Node(data);
@@ -34,5 +44,30 @@ public class BinaryTree {
                 add(start.right, data);
             }
         }
+    }
+    public void printNodes(Node node) {
+        // base case
+        if (node == null) {
+            return;
+        }
+//        if (node.left == null && node.right == null) {
+//            //System.out.println(node.toString());
+//        }
+        System.out.println(node.toString());
+        printNodes(node.left);
+        printNodes(node.right);
+    }
+    public void search(Node n, String s){
+        if (n == null){
+            System.out.println(n + "is null");
+            System.out.println(s + " not found");
+        }
+        else if (s == n.data.getLastName()){
+            System.out.println(n.data);
+        }
+        else if(s.compareTo(n.data.getLastName()) < 0){
+            search(n.left,s);
+        }
+        else search(n.right,s);
     }
 }

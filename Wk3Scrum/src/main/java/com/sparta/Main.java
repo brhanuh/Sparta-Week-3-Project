@@ -25,11 +25,17 @@ public class Main {
         }
 
         BinaryTree bt = new BinaryTree();
-        BinaryTree.Node start = new BinaryTree.Node(EmployeeList.get(0));
+        final BinaryTree.Node root = new BinaryTree.Node(EmployeeList.get(0));
         for (Employee e: EmployeeList) {
-            System.out.println(e);
-            bt.add(start,e);
+//            System.out.println("Current employee " + e.toString());
+//            System.out.println("Root: " + root.toString());
+//            System.out.println("hello");
+            bt.add(root,e);
         }
+        //System.out.println("starting node: " + root.toString());
+        //bt.printNodes(root);
+        bt.search(root, "Bail");
+
 
     }
 }
