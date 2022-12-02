@@ -68,7 +68,7 @@ public class BinaryTree {
         }
         else if (s.equals(n.data.getLastName())){
             System.out.println(n.data.fullToString());
-            while(n.left.data.getLastName().equals(s)){
+            if (n.left != null && n.left.data.getLastName().equals(s)){
                 search(n.left,s);
             }
         }
