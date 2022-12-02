@@ -30,6 +30,15 @@ public class Employee implements Comparable<Employee> {
                 "lastName='" + lastName;
     }
 
+    public String fullToString(){
+        return
+                "Employee Number: " + this.employeeNumber + ", " +
+                        "Full name: " + this.firstName + " " + this.lastName + ", " +
+                        "Gender: " + this.gender + ", " +
+                        "Date of Birth: " + this.dateOfBirth + ", " +
+                        "Date of Employment: " + this.dateOfEmployment;
+    }
+
     public void setEmployeeNumber(int employeeNumber) {
         this.employeeNumber = employeeNumber;
     }
